@@ -163,7 +163,7 @@ public class InventoryDemo {
             System.out.println("\nHAND:");
             System.out.println("----");
             displayHolding();
-            System.out.println("\nINVENTORY:");
+            System.out.println("\nINVENTORY: " + inventory.getNumItems()+"/"+inventory.getMaxCapacity());
             System.out.println("---------");
             inventory.listContents();
             

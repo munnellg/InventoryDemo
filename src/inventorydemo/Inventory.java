@@ -158,10 +158,13 @@ public class Inventory {
      */
     public boolean dropItem (int index) {
         // Check that the index is valid
-        if(index >= this.contents.length || index < 0) {
+        if(index >= this.contents.length || index < 0 || 
+                this.contents[index] == null) {
             // Return false on invalid index
             return false;
         }
+        
+        this.numItems--;
         
         // Reorder array items, overwriting the element we want to delete
         for(int i=index; i<this.contents.length-1; i++) {
